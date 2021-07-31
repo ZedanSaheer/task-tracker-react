@@ -1,5 +1,4 @@
 import React from 'react'
-import { FaTimes } from 'react-icons/fa'
 import { useState } from 'react'
 
 const NoTask = ({showAdd}) => {
