@@ -1,33 +1,11 @@
 import React from 'react'
+import Task from './Task'
 
-const tasks = [
-    {
- id:1,
- text:'Doctors Appointment',
- day:'Feb 5th at 2:30pm',
- reminder : true
 
-}
-, {
- id:2,
- text:'Teachers Appointment',
- day:'Feb 5th at 2:30pm',
- reminder : true
-
-}
-, {
- id:3,
- text:'Service Appointment',
- day:'Feb 5th at 2:30pm',
- reminder : false
-
-}
-]
-
-export const Tasks = () => {
+export const Tasks = ({tasks , onDelete , onToggle}) => {
     return (
         <>
-           {tasks.map((tasks)=> (<h3 key={tasks.id}>{tasks.text}</h3>))} 
+            {tasks.map((task) => (<Task key={task.id} task={task} onDelete={onDelete} onToggle={onToggle} />))}
         </>
     )
 }
